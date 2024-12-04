@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>회원가입</title>
+</head>
+<body>
+	<form method="post" action="/jspStudy/MemberInsert">
+		<table>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="userID" id="userID"><span></span></td>
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pwd" id="pwd"><span></span></td>
+			</tr>
+			<tr>
+				<td>비밀번호확인</td>
+				<td><input type="password" name="pwd2" id="pwd2"><span></span></td>
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="username" id="username"><span></span></td>
+			</tr>
+			<tr>
+				<td>생년월일</td>
+				<td><input type="date" name="userbirthday" id="userbirthday"><span></span></td>
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="email" name="useremail" id="useremail"><span></span></td>
+			</tr>
+			<tr>
+				<td>휴대전화</td>
+				<td><input type="tel" name="userphone" id="userphone"><span></span></td>
+			</tr>
+			<tr>
+         <td colspan="2" align="center">
+           <input type="submit" value="저장">&nbsp;&nbsp;
+           <input type="reset" value="취소">
+         </td>
+         </tr>
+		</table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+127.0.0.1 - - [04/Dec/2024:08:45:43 +0900] "GET / HTTP/1.1" 404 807
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:08:46:43 +0900] "GET /jspStudy/bbs/wirte.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:08:46:43 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:08:47:00 +0900] "GET /jspStudy/member/member.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:08:47:00 +0900] "GET /favicon.ico HTTP/1.1" 404 818
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:08:47:27 +0900] "POST /jspStudy/memberInsert HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:08:47:28 +0900] "GET /jspStudy/memberList HTTP/1.1" 200 2721
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:10:19:25 +0900] "POST /jspStudy/memberInsert HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Dec/2024:10:19:25 +0900] "GET /jspStudy/memberList HTTP/1.1" 200 3233
