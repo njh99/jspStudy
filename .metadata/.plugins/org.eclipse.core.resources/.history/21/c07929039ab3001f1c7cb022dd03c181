@@ -58,7 +58,6 @@ public class MemberInsert extends HttpServlet {
 		String id = "webuser";
 		String pw = "123456";
 		PreparedStatement pstmt = null; // 오라클에서 작업할 쿼리문 사용할게 하는 명령문
-		//CURD
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection(url, id, pw);
@@ -76,7 +75,7 @@ public class MemberInsert extends HttpServlet {
 		} 
 		if (returnflag) {
 			System.out.println("입력성공");
-			//3. 출력
+
 			out.println("<h1 align=\"center\">회원가입이 완료되었습니다.</h1>");
 			out.println("<table align=\"center\" width=\"300\" border=\"1\">");
 			out.println("<tr>");

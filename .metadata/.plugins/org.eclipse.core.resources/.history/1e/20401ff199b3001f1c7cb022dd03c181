@@ -32,7 +32,7 @@ public class MemberInsert extends HttpServlet {
 		// 1-1. 전송된 값을 UTF-8 세팅.
 		PrintWriter out = null;
 		try {
-			request.setCharacterEncoding("UTF-8");//사용자 데이터 값을 UTF-8로 받겠다
+			request.setCharacterEncoding("UTF-8");
 			out = response.getWriter();
 		} catch (UnsupportedEncodingException e) {
 			e.printStackTrace();
@@ -41,7 +41,6 @@ public class MemberInsert extends HttpServlet {
 		}
 		response.setContentType("text/html;charSet=UTF-8");
 		// 1-2. 정보 가져오기
-		//1. 사용자요청데이터를 읽어온다. 2. CURD 3.그 결과값을 화면에 뿌려준다/ 화면을 설계한다.
 		String name = request.getParameter("name");
 		String uid = request.getParameter("id");
 		String pwd = request.getParameter("pwd");
@@ -58,7 +57,6 @@ public class MemberInsert extends HttpServlet {
 		String id = "webuser";
 		String pw = "123456";
 		PreparedStatement pstmt = null; // 오라클에서 작업할 쿼리문 사용할게 하는 명령문
-		//CURD
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 			con = DriverManager.getConnection(url, id, pw);
@@ -68,15 +66,15 @@ public class MemberInsert extends HttpServlet {
 			pstmt.setString(3, pwd);
 			System.out.println(name + uid + pwd);
 			int count = pstmt.executeUpdate();
-			returnflag = (count != 0) ? true : false;
+			flag = (count != 0) ? true : false;
 		} catch (ClassNotFoundException e) {
 			System.out.println(e.toString());
 		} catch (SQLException e) {
 			System.out.println(e.toString());
 		} 
-		if (returnflag) {
+		if (flag) {
 			System.out.println("입력성공");
-			//3. 출력
+
 			out.println("<h1 align=\"center\">회원가입이 완료되었습니다.</h1>");
 			out.println("<table align=\"center\" width=\"300\" border=\"1\">");
 			out.println("<tr>");
