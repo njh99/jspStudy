@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="javax.security.auth.message.callback.PrivateKeyCallback.Request"/>
+    <fullyQualifiedTypeName name="co.kh.dev.account.LoginCheckServlet"/>
+    <fullyQualifiedTypeName name="co.kh.dev.account.model.AccountVO"/>
+    <fullyQualifiedTypeName name="co.kh.dev.account.model.AccountDAO"/>
+</qualifiedTypeNameHistroy>

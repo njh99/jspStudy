@@ -1,0 +1,57 @@
+package co.kh.dev352.login;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/loginCheck.do")
+public class LoginCheckServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	protected void processRequest(HttpServletRequest request, HttpServletResponse response) throws SQLException, ClassNotFoundException {
+		Connection con = null;
+		PreparedStatement pstmt = null;
+		String MEMBER_SELECT ="SELECT ID FROM MEMBER WHERE ID = ?";
+		Class.forName("oracle.jdbc.driver.OracleDriver");
+		con = DriverManager.getConnection("jdbc:oracle:thin:@127.0.0.1:1521/xe", "webuser", "123456");
+		//사용자정보를 읽는다.
+		try {
+			request.setCharacterEncoding("UTF-8");
+			String id = request.getParameter("id");
+			//2. 데이터 베이스에서 확인한다.
+			
+			//3. 체크확인 로그인 인정되면 세션을 만들어서 저장한다.
+			if(id.equals(id)) {
+				//세션이 있으면 가져오고 없으면 생성시킨다.
+				HttpSession session = request.getSession();
+				session.setAttribute("id", id);
+			}else {
+				response.sendRedirect("/jspStudy/loginServlet.do");
+			}
+		} catch (UnsupportedEncodingException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		processRequest(request, response);
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		processRequest(request, response);
+	}
+}
+

@@ -1,0 +1,29 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%!
+//맴버변수, 맴버함수, 오버라이딩
+private int globalNumber = 0;
+//맴버함수
+public int getGlobalNumber(){
+	return this.globalNumber;
+}
+//오버라이딩
+public void jspInit(){
+	System.out.println("jspInit() 오버라이딩 함수 호출됨");
+}
+public void jspDestroy(){
+	System.out.println("jspDestroy() 오버라이딩 함수 호출됨");
+}
+
+%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+</body>
+</html>
